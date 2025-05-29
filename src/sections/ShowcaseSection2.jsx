@@ -18,7 +18,7 @@ const ShowcaseSection = () => {
         {
             name: "Book Management System",
             image: "/images/project2.png",
-            description: "A web application to manage books, allowing users to add, update, and delete book records with ease.",
+            description: "A web application to manage books, allowing users to add, update, and delete book records with ease.A web application to manage books, allowing users to add, update, and delete book records with ease.",
             technologies: "React, Node.js, TailwindCSS",
             link: "https://book-management-system.example.com",
             ref: bookRef,
@@ -29,7 +29,7 @@ const ShowcaseSection = () => {
             description: "A platform to showcase startups, providing details and networking opportunities for entrepreneurs.",
             technologies: "React, Express, MongoDB",
             link: "https://my-directory.example.com",
-            ref: myDirectoryRef,
+            ref: bookRef,
         },
     ];
 
@@ -113,7 +113,7 @@ const ShowcaseSection = () => {
                                     className="bg-white text-black rounded-full px-4 py-1"
                                     onClick={() => openPopup(project)}
                                 >
-                                    Play
+                                    View
                                 </button>
                             </div>
                         ))}
@@ -125,33 +125,40 @@ const ShowcaseSection = () => {
             {isPopupOpen && selectedProject && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm transition-all duration-500"
     onClick={closePopup} >
-                    <div className="bg-white rounded-lg p-6 w-11/12 max-w-md relative">
-                        {/* Close Button */}
+                    <div class="flex items-center justify-center ">
+                        <div class="group h-96 w-96 [perspective:1000px]">
+                             {/* Close Button */}
                         <button
-                            className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+                            className="absolute top-2 right-2 text-white-600 hover:text-gray-800"
                             onClick={closePopup}
                         >
                             ✕
                         </button>
-                        {/* Project Image */}
-                        <div className="image-wrapper mb-4">
-                            <img src={selectedProject.image} alt={selectedProject.name} className="w-full h-48 object-cover rounded" />
+                            <div class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                            <div class="absolute inset-0">
+                                <img class="h-full w-full rounded-xl object-fit shadow-xl shadow-black/40" src={selectedProject.image} alt="" />
+                            </div>
+                            <div class="absolute inset-0 h-full w-full rounded-xl bg-black/80 p-6 text-start text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                <div class="flex min-h-full flex-col items-start text-slate-200">
+                                    <h2 className="text-xl font-bold mb-2">{selectedProject.name}</h2>
+                                    <p className="mb-4">{selectedProject.description}</p>
+                                    <p className="text-sm mb-4">
+                                        <strong>Technologies:</strong> {selectedProject.technologies}
+                                    </p>
+                                    <a
+                                        href={selectedProject.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-blue-500 hover:underline"
+                                    >
+                                        Visit Project
+                                    </a>
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                        {/* Project Details */}
-                        <h2 className="text-xl font-bold mb-2">{selectedProject.name}</h2>
-                        <p className="text-gray-700 mb-4">{selectedProject.description}</p>
-                        <p className="text-sm text-gray-600 mb-4">
-                            <strong>Technologies:</strong> {selectedProject.technologies}
-                        </p>
-                        <a
-                            href={selectedProject.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-500 hover:underline"
-                        >
-                            Visit Project
-                        </a>
-                    </div>
+                        </div>
+
                 </div>
             )}
         </section>
