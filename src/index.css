@@ -200,6 +200,22 @@ section {
         @apply text-lg md:text-xl lg:text-2xl font-semibold mt-5;
       }
     }
+    .project-list-wrapper2 {
+        @apply flex flex-col xl:flex-col gap-10 xl:w-[40%];
+
+        .image-wrapper {
+          @apply xl:h-[37vh] h-64 lg:h-72 relative rounded-xl xl:px-5 2xl:px-12 py-0;
+        }
+
+        img {
+          @apply w-full h-full object-contain rounded-xl;
+        }
+
+        h2 {
+          @apply text-lg lg:text-2xl font-semibold mt-5;
+        }
+}
+
   }
 
   .cta-wrapper {

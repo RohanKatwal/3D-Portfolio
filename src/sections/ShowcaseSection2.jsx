@@ -10,11 +10,13 @@ const ShowcaseSection = () => {
     const pathaoRef = useRef(null);
     const bookRef = useRef(null);
     const myDirectoryRef = useRef(null);
+    const projectListRef = useRef(null); // Added missing ref
 
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
     const [isFlipped, setIsFlipped] = useState(false); // Track flip state for mobile
     const [isMobile, setIsMobile] = useState(false); // Track device type
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     // Project data
     const projects = [
@@ -110,6 +112,30 @@ const ShowcaseSection = () => {
         });
     }, []);
 
+    // Navigation handlers
+  const handleNext = () => {
+    if (currentIndex + 4 < projects.length) {
+      const newIndex = currentIndex + 4;
+      setCurrentIndex(newIndex);
+      gsap.fromTo(
+        projectListRef.current,
+        { x: -50, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.5 }
+      );
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      const newIndex = currentIndex - 4;
+      setCurrentIndex(newIndex);
+      gsap.fromTo(
+        projectListRef.current,
+        { x: 50, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.5 }
+      );
+    }
+  };
     // Open popup and reset flip state
     const openPopup = (project) => {
         setSelectedProject(project);
@@ -132,6 +158,7 @@ const ShowcaseSection = () => {
         }
     };
 
+    const displayedProjects = projects.slice(currentIndex, currentIndex + 4);
     return (
         <section id="work" ref={sectionRef} className="app-showcase">
         <div className="w-full">
@@ -153,8 +180,8 @@ const ShowcaseSection = () => {
                 </div>
             </div>
             {/* Right */}
-            <div className="project-list-wrapper overflow-hidden">
-                {projects.map((project, index) => (
+            <div className="project-list-wrapper2 overflow-hidden" ref={projectListRef}>
+                {displayedProjects.map((project, index) => (
                 <div
                     key={index}
                     className="project flex items-center gap-4"
@@ -179,6 +206,26 @@ const ShowcaseSection = () => {
                     </button>
                 </div>
                 ))}
+                
+                {/* Navigation Arrows - Below the four projects */}
+                <div className="flex items-start gap-4 mt-1">
+                  {currentIndex > 0 && (
+                    <button
+                      className="text-white"
+                      onClick={handlePrev}
+                    >
+                      ←
+                    </button>
+                  )}
+                  {currentIndex + 4 < projects.length && (
+                    <button
+                      className="text-white"
+                      onClick={handleNext}
+                    >
+                      →
+                    </button>
+                  )}
+                </div>
             </div>
             </div>
         </div>
