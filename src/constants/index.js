@@ -263,6 +263,70 @@ const socialImgs = [
   },
 ];
 
+// Array of images to cycle through
+const projectImages = [
+    '/images/project1.png',
+    '/images/project2.png',
+    '/images/project3.png'
+];
+
+// Project data
+const projects = [
+    {
+        name: 'Book Management System',
+        image: '/images/project2.png',
+        description:
+            'A web application to manage books, allowing users to add, update, and delete book records with ease.',
+        technologies: 'React, Node.js, TailwindCSS',
+        link: 'https://book-management-system.example.com',
+    },
+    {
+        name: 'My Directory - A Startup Showcase App',
+        image: '/images/project3.png',
+        description:
+            'A platform to showcase startups, providing details and networking opportunities for entrepreneurs.',
+        technologies: 'React, Express, MongoDB',
+        link: 'https://my-directory.example.com',
+        
+    },
+    {
+        name: 'My Directory - A Startup Showcase App',
+        image: '/images/project3.png',
+        description:
+            'A platform to showcase startups, providing details and networking opportunities for entrepreneurs.',
+        technologies: 'React, Express, MongoDB',
+        link: 'https://my-directory.example.com',
+        
+    },
+    {
+        name: 'My Directory - A Startup Showcase App',
+        image: '/images/project3.png',
+        description:
+            'A platform to showcase startups, providing details and networking opportunities for entrepreneurs.',
+        technologies: 'React, Express, MongoDB',
+        link: 'https://my-directory.example.com',
+        
+    },
+    {
+        name: 'My Directory - A Startup Showcase App',
+        image: '/images/project3.png',
+        description:
+            'A platform to showcase startups, providing details and networking opportunities for entrepreneurs.',
+        technologies: 'React, Express, MongoDB',
+        link: 'https://my-directory.example.com',
+        
+    },
+    {
+        name: 'My Directory - A Startup Showcase App',
+        image: '/images/project3.png',
+        description:
+            'A platform to showcase startups, providing details and networking opportunities for entrepreneurs.',
+        technologies: 'React, Express, MongoDB',
+        link: 'https://my-directory.example.com',
+        
+    },
+];
+
 export {
   words,
   abilities,
@@ -275,4 +339,6 @@ export {
   techStackIcons,
   techStackImgs,
   navLinks,
+  projectImages,
+  projects
 };
