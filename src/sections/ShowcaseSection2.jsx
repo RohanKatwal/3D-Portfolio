@@ -6,7 +6,7 @@ import { projectImages,projects } from '../constants'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ShowcaseSection = () => {
+const ShowcaseSection2 = () => {
     const sectionRef = useRef(null);
     const leftmodalref = useRef(null);
     const rightmodalref = useRef(null);
@@ -270,4 +270,4 @@ const ShowcaseSection = () => {
     );
 };
 
-export default ShowcaseSection;
+export default ShowcaseSection2;
