@@ -147,39 +147,40 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    review: "Rohan's full stack contributions at Codedrops have strengthened our backend and improved overall system performance. His dedication and coding efficiency are highly appreciated.",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    title: "Full Stack Developer",
+    date: "Aug 2022 - Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Wrote reusable, testable, and efficient code for high-availability applications.",
+      "Designed and developed low-latency, performant software solutions.",
+      "Integrated databases like MongoDB and MySQL for data consistency.",
+      "Collaborated with UI/UX designers to create seamless user experiences."
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+    review: "Rohan was instrumental in developing scalable backend services at Saga Innovation. His expertise in Node.js made a big impact during his tenure.",
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    title: "Node.js Developer / Backend Developer",
+    date: "Apr 2022 - Aug 2022",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Developed RESTful APIs using Node.js frameworks like Express.",
+      "Collaborated with cross-functional teams to deliver software solutions.",
+      "Implemented authentication and authorization for enhanced security."
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+    review: "As a Backend developer, Rohan quickly adapted to our workflows and contributed meaningfully to our CI/CD processes. A fast learner with great potential.",
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    title: "Python Developer",
+    date: "Jan 2022 - Apr 2022",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Utilized CI/CD to enhance the software development lifecycle.",
+      "Developed Python-based solutions for internal tools and automation.",
+      "Supported team in testing and deploying software updates."
     ],
   },
 ];
